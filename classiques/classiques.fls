@@ -355,8 +355,13 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
 OUTPUT classiques.toc
+INPUT ./exercices/struct_alg.tex
+INPUT ./exercices/struct_alg.tex
+INPUT exercices/struct_alg.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/newpx/zpl-BoldItalic-tlf-t1.tfm
+INPUT ./exercices/matrices.tex
+INPUT ./exercices/matrices.tex
+INPUT exercices/matrices.tex
 INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/eulervm/zeurm10.vf
@@ -365,6 +370,13 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/eulervm/zeusm10.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/newpx/zpl-BoldItalic-tlf-t1.tfm
+INPUT ./exercices/polynomes.tex
+INPUT ./exercices/polynomes.tex
+INPUT exercices/polynomes.tex
+INPUT ./exercices/ev_dim_al.tex
+INPUT ./exercices/ev_dim_al.tex
+INPUT exercices/ev_dim_al.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/eulervm/zeurm7.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
@@ -378,6 +390,7 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/eulervm/zeusm10.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm10.tfm
 INPUT classiques.aux
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb
