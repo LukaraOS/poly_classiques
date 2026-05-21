@@ -28,3 +28,95 @@ Soit $f \colon \mathcal{M}_n(\mathbb{K})\rightarrow \mathbb{K}$ non constante
 telle que : $\forall A,B \in \mathcal{M}_n(\mathbb{K}), f(AB)=f(A)f(B)$.
 
 Montrer que $f(A)=0$ si et seulement si $A$ n'est pas inversible.
+\newpage
+
+\subsubsection{Décomposition d'une matrice par le rang}
+\textbf{\underline{Énoncé :}} 
+Soit $A \in \mathcal{M}_n(\mathbb{K})$ de rang $r$, 
+
+Montrer qu'il existe $r$ matrices de rang $1$ dont 
+la somme fait $A$.      
+
+\textbf{\underline{Solution :}}
+
+Sans perte de généralité, on suppose que les $r$ premières colonnes de $A$ sont libres. 
+
+C'est possible car il y a $r$ colonnes libres comme $A$ est de rang $r$. 
+et on simplifie seulement nos indices. 
+
+Alors : $$A = 
+\begin{pmatrix} 
+ &C_1 &C_2 &\dots &C_r & C_{r+1} &\dots&C_n \\ 
+\end{pmatrix}
+$$
+Il se trouve que pour tout $i> r$, $C_i \in \text{Vect}(C_1,\dots C_r)$.
+
+Donc pour tout $i > r$, il existe $a_{i,1},\dots,a_{i,r}$ tels que 
+$\displaystyle C_i = \sum_{k=1}^{r}a_{i,k}C_k $
+On pose pour tout $i \in \llbracket 1,r \rrbracket$
+
+$$ M_i = \begin{pmatrix} &0&\dots&\underbrace{C_i}_{\text{i-éme colonne}} &\dots &\underbrace{a_{j,i}}_{\text{j-éme colonne}} &\dots &a_{n,i}\end{pmatrix}$$
+
+
+\subsubsection{Problème 12 :}
+\textbf{\underline{Énoncé :}} 
+
+Soit $A_1,\dots, A_r$ des parties de $\llbracket 1,n\rrbracket$.
+
+On suppose qu'il existe $b<a$ tels que pour tout $i,j \in \llbracket 1,r\rrbracket$ : 
+
+$$ 
+\text{Card}(A_i \bigcap A_j) = 
+\begin{cases} a & \mbox{si }  i=j \\ b & \mbox{si } i \neq j \end{cases}
+$$
+
+Montrer que $r \leq n$.
+
+\subsubsection{Décomposition en inverse}
+\textbf{\underline{Énoncé :}} 
+
+Soit $\mathbb{K}$ un corps de caractéristique $\neq 2$
+
+Soit $M \in \mathcal{M}_n(\mathbb{K})$, 
+montrer que $M$ s'écrit comme la somme de deux matrices inversibles.
+
+\textbf{\underline{Solution :}}
+
+Les coefficients diagonaux de $M$ sont $d_1,\dots,d_n$.
+
+Alors pour tout $i \in \llbracket 1,n\rrbracket$, on pose 
+
+$$
+a_i = \begin{cases} \frac{d_i}{2} & \mbox{si }  d_i\neq 0 \\ 1 & \mbox{sinon } \end{cases} \text{ et } b_i = \begin{cases} \frac{d_i}{2} & \mbox{si }  d_i\neq 0 \\ -1 & \mbox{sinon }  \end{cases}
+$$
+
+On a alors 
+$$
+M =
+\begin{pmatrix}
+d_i &  &(S)\\
+    &\ddots & \\
+ (I)   &  & d_n 
+\end{pmatrix}
+$$
+
+On pose 
+$$
+A = \begin{pmatrix}
+a_i &  &(0)\\
+    &\ddots & \\
+ (I)   &  & a_n 
+\end{pmatrix} 
+\text{ et } 
+B = 
+\begin{pmatrix}
+b_i &  &(S)\\
+    &\ddots & \\
+ (0)   &  & b_n 
+\end{pmatrix}
+$$
+
+Par définition, on a bien $A + B = M$
+
+Et $A$ et $B$ sont bien inversibles car triangulaires à coefficients diagonaux non nuls. $\square $
+

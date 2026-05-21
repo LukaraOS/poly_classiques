@@ -1,6 +1,42 @@
 \section{Espaces vectoriels, dimensions et applications linéaires}
-\subsection{Première caractérisation des homothéties.}
-\subsection{Seconde caractérisation des homothéties.}
-\subsection{Deux preuves de la \underline{majoration de l'indice de nilpotence} en dimension finie.}
-\subsection{Union de sous-espaces vectoriels stricts et supplémentaire communs.}
-\subsection{Une preuve de la formule d'inversion de Pascal-Möbius.}
+\subsection{Exercices méthodes :}
+\subsection{Exercices classiques :}
+\subsubsection{Première caractérisation des homothéties.}
+\subsubsection{Seconde caractérisation des homothéties.}
+\subsubsection{Théorème de la base télescopique.}
+\subsubsection{Deux preuves de la \underline{majoration de l'indice de nilpotence} en dimension finie.}
+\subsubsection{Union de sous-espaces vectoriels stricts et supplémentaire communs.}
+\subsubsection{Une preuve de la formule d'inversion de Pascal-Möbius.}
+\subsubsection{Théorème de Mashcke.}
+\subsubsection{Orthogonalité duale.}
+$$Im(u) \subset F = \bigcap_{C \in \ker(u)}\ker(\varphi(C))$$
+où $\varphi:\mathcal{M}_n(\mathbb{K})\rightarrow \mathcal{M}_n(\mathbb{K})^*$ associe $M$ à $f:X \rightarrow Tr(MX)$
+et $u : \mathcal{M}_n(\mathbb{K})\rightarrow \mathcal{M}_n(\mathbb{K})$ associe $X$ à $AX + XA$
+
+Il reste à montrer que $\underline{rg(u) = \dim(F)}$
+
+
+
+
+On note $G = \{\varphi(C)| C \in \ker(u)\} = \varphi(\ker(u))$, 
+et $G$ est de dimension $dim(\ker(u))$ comme $\varphi$ est un isomorphisme
+
+Alors, $G\degres = F = \bigcap_{C \in \ker(u)}\ker(\varphi(C))$
+
+Par le DM, $dim(G) = n^2 - dim(G\degres)$, donc $dim(\ker(u)) = n^2 - dim(F)$ et d'après le théorème du rang : 
+$$rg(u) = dim(F) \hspace{12px} \square$$
+
+Soit $A \in \mathcal{M}_n(\mathbb{K})$, 
+et $P \in GL_n(\mathbb{K})$ : 
+
+Alors $$Im(A) = Im(AP) \text{ et } Ker(PA) = Ker(A)$$ 
+
+Preuve : 
+
+Soit $X \in Im(A)$, alors $X = AY = AP(P^{-1}Y) \in Im(AP)$
+
+Soit $X \in Im(AP)$, alors $X = A(PY) \in Im(A)$.
+
+Donc Im(A) = Im(AP).
+
+Soit $X \in Ker(A)$, alors $PAX = P(AX) = 0 \text{ ie } X \in Ker(PA)$

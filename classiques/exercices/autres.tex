@@ -1,0 +1,57 @@
+\section{Autres}
+\subsection{Exercices exotiques : }
+\newpage
+\subsubsection{Marche aléatoire isotrope}
+Soit $n \in \mathbb{N}$, 
+
+Comme chaque direction peut être choisie de manière équiprobable
+il nous suffit de dénombrer le nombre de chemins gagnants qu'on note $G_{2n}$ et on divisera par 
+la suite par le nombre de chemin total qu'on note $T_{2n}$. 
+
+
+En notant un chemin de longueur $2n$ comme une suite dans
+$\{B,G,D,H\}$, se donner un chemin gagnant revient à se donner un chemin 
+comportant autant de D que de G et autant de B que de H.
+
+
+Ainsi, choisir un chemin consiste à choisir :
+Le nombre de déplacements vers le haut $k \in \llbracket 0,n\rrbracket$
+
+On se convainc qu'un chemin avec $k> n$ déplacements vers le haut
+ne peut revenir au centre, car il faudrait au moins $k>n$ déplacements vers le bas, et donc au moins $2k>2n$ déplacements verticaux.
+
+- Quand nous effectuerons les $k$ déplacements vers le haut dans le chemin 
+parmi les $2n$ déplacements : $$\binom{2n}{k}$$
+
+
+- Puis choisir quand nous effectuerons les $k$ déplacements vers le bas parmi les $2n-k$ déplacements restants : 
+$$ \binom{2n-k}{k}$$ 
+
+- Il reste $2n-2k$ déplacements à faire, or il faut que le nombre de déplacements à gauche 
+soit égal au nombre de déplacements à droite, donc $n-k$ déplacements des deux côtés.
+
+Ainsi il suffit de choisir quand nous nous déplacerons 
+à droite et ceux à gauche seront forcés : $$\binom{2n-2k}{n-k}$$
+
+Alors : 
+
+$$ 
+\begin{aligned} 
+G_{2n} &= \sum_{k=0}^{n}   \binom{2n}{k}\binom{2n-k}{k}\binom{2n-2k}{n-k}
+    \\ &= \sum_{k=0}^{n} \frac{(2n)!}{k!(2n-k)!} \frac{(2n-k)!}{k!(2n-2k)!} \frac{(2n-2k)!}{(n-k)!(n-k)!}
+    \\ \text{Tout se simplifie bien } &= \sum_{k=0}^{n} \frac{(2n)!}{k!^2(n-k)!^2} = \sum_{k=0}^{n} \frac{n!^2}{k!^2(n-k)!^2} \frac{(2n)!}{n!^2}
+    \\ \text{On sort le terme constant qui dérange }&= \frac{(2n)!}{n!^2} \sum_{k=0}^{n} (\frac{n!}{k!(n-k)!})^2 = \frac{(2n)!}{n!^2} \sum_{k=0}^{n} \binom{k}{n}^2
+    \\ \text{Par la formule de Vandermonde }&= \frac{(2n)!}{n!^2} \binom{2n}{n}
+    \\ \text{Soit finalement : } &= \binom{2n}{n}^2 
+\end{aligned}
+$$
+
+Par ailleurs, d'après la description précédente, le nombre total de chemin est $$T_{2n}= 4^{2n}$$ 
+
+Donc $$\boxed{P(C_{2n}) = \frac{G_{2n}}{T_{2n}} = \binom{2n}{n}^2 \frac{1}{4^{2n}}}$$
+
+Donnons un équivalent en $+\infty$ : 
+
+$$\begin{aligned}
+\displaystyle \text{Par Stirling : } \boxed{P(C_{2n}) = \binom{2n}{n}^2 \frac{1}{4^{2n}} \sim \frac{(\sqrt{4\pi n})(\frac{2n}{e})^{2n}}{(\sqrt{2\pi n}(\frac{n}{e})^n)^44^{2n}}= \frac{1}{n\pi}} \hspace{15px} \textit{(trust les calculs)}
+\end{aligned}$$
